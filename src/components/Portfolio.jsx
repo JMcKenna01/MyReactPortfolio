@@ -1,0 +1,53 @@
+import React from 'react';
+import Project from './Project'; 
+
+// projects data
+const projects = [
+  {
+    id: 1,
+    title: 'Project One',
+    description: 'This is a brief description of Project One.',
+    image: '/path-to-image-1.jpg', 
+    liveLink: 'https://example.com/project-one',
+    codeLink: 'https://github.com/yourusername/project-one',
+  },
+  {
+    id: 2,
+    title: 'Project Two',
+    description: 'This is a brief description of Project Two.',
+    image: '/path-to-image-2.jpg', 
+    liveLink: 'https://example.com/project-two',
+    codeLink: 'https://github.com/yourusername/project-two',
+  },
+  {
+    id: 3,
+    title: 'Project Three',
+    description: 'This is a brief description of Project Two.',
+    image: '/path-to-image-2.jpg', 
+    liveLink: 'https://example.com/project-two',
+    codeLink: 'https://github.com/yourusername/project-two',
+  },
+  // Add more projects as needed
+];
+
+function Portfolio() {
+  return (
+    <div>
+      <h1>Portfolio</h1>
+      <div className="portfolio-grid">
+        {projects.map((project) => (
+          <Project
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            liveLink={project.liveLink}
+            codeLink={project.codeLink}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Portfolio;
