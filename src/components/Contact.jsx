@@ -1,26 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+    if (!event.target.value.trim()) {
+      setNameError('Name is required');
+    } else {
+      setNameError('');
+    }
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!event.target.value.trim()) {
+      setEmailError('Email is required');
+    } else if (!emailPattern.test(event.target.value)) {
+      setEmailError('Invalid email address');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    
+  };
+
   return (
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
       <h1 style={{ textAlign: 'center' }}>Contact</h1>
       <p style={{ textAlign: 'center' }}>I'm currently open to new opportunities, collaborations, or just a chat. Feel free to reach out!</p>
       
-      {/* Email */}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <a href="mailto:JMcKenna2026@gmail.com" style={{ color: '#004080', textDecoration: 'none' }}>
-       JMcKenna2026@gmail.com
-        </a>
-      </div>
-      
       {/* Contact Form */}
-      <form style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        <input type="text" placeholder="Your Name" style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }} />
-        <input type="email" placeholder="Your Email" style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }} />
-        <textarea placeholder="Your Message" rows="4" style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}></textarea>
+      <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <input 
+          type="text" 
+          placeholder="Your Name" 
+          value={name}
+          onChange={handleNameChange}
+          onBlur={handleNameChange} 
+          style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }} 
+        />
+        {nameError && <span style={{ color: 'red' }}>{nameError}</span>}
+        <input 
+          type="email" 
+          placeholder="Your Email" 
+          value={email}
+          onChange={handleEmailChange}
+          style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }} 
+        />
+        {emailError && <span style={{ color: 'red' }}>{emailError}</span>}
+        <textarea 
+          placeholder="Your Message" 
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
+          rows="4" 
+          style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
+        ></textarea>
         
         <button 
           type="submit" 
+          disabled={!name || !email || !message || emailError}
           style={{ 
             padding: '10px', 
             borderRadius: '5px', 
@@ -29,12 +76,12 @@ function Contact() {
             color: 'white', 
             cursor: 'pointer',
             transition: 'background-color 200ms ease-in-out',
-            width: '100%', // Ensures button width is responsive to its container
+            width: '100%', 
           }}
-          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#004080'} // Darker shade on hover
-          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#61dafb'} // Original color
-          onFocus={(e) => e.currentTarget.style.backgroundColor = '#004080'} // Darker shade on focus
-          onBlur={(e) => e.currentTarget.style.backgroundColor = '#61dafb'} // Original color
+          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#004080'} 
+          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#61dafb'} 
+          onFocus={(e) => e.currentTarget.style.backgroundColor = '#004080'} 
+          onBlur={(e) => e.currentTarget.style.backgroundColor = '#61dafb'} 
         >
           Send Message
         </button>

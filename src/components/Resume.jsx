@@ -3,36 +3,36 @@ import React from 'react';
 function Resume() {
   return (
     <div className="resume">
-      <h1>Resume</h1>
-      <h2>Joe McKenna-</h2> 
-      <p>As a passionate learner and developer, I've honed my skills through intensive study and hands-on projects in a coding bootcamp. Below are some highlights of my journey and achievements.</p>
-
-      {/* Coding Bootcamp Experience */}
+      {/* Resume Download */}
       <section>
-        <h2>Coding Bootcamp Experience</h2>
-        <ul>
-          <li>
-            <strong>UCF Coding BootCamp</strong> - Completion Date - 4/09/24
-            <p>A rigorous, immersive program focused on full stack web development, covering technologies such as HTML, CSS, JavaScript, React, Node.js, and more.</p>
-          </li>
-          {/* List any specific achievements or notable projects */}
-        </ul>
+        <h2>Download My Resume</h2>
+        <a href="/path-to-your-resume.pdf" download>Download Resume</a>
       </section>
+
+      <h1>Resume</h1>
+      <h2>Joe McKenna-</h2>
+      <p>As a passionate learner and developer, I've honed my skills through intensive study and hands-on projects in a coding bootcamp. Below are some highlights of my journey and achievements.</p>
 
       {/* Skills */}
       <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML/CSS - Building responsive and accessible user interfaces.</li>
-          <li>JavaScript (ES6+) - Writing modern and efficient JavaScript code.</li>
-          <li>React - Developing dynamic and single-page applications (SPAs).</li>
-          <li>Node.js - Creating server-side logic and APIs.</li>
-          <li>Express.js - Building web applications and RESTful APIs with Node.js.</li>
-          <li>MongoDB - Storing and querying data effectively in a NoSQL database.</li>
-          <li>Git and GitHub - Version control and collaboration on software projects.</li>
-          {/* Add more skills as needed */}
-        </ul>
-      </section>
+  <h2>Skills</h2>
+  <div className="skills-grid">
+    {[
+      { src: "/HTML.CSS.webp", alt: "HTML/CSS", text: "HTML/CSS - Building responsive and accessible user interfaces." },
+      { src: "/javascript.webp", alt: "JavaScript", text: "JavaScript (ES6+) - Writing modern and efficient JavaScript code." },
+      { src: "/react.webp", alt: "React", text: "React - Developing dynamic and single-page applications (SPAs)." },
+      { src: "/node.js.webp", alt: "Node.js", text: "Node.js - Creating server-side logic and APIs." },
+      { src: "/express.js.webp", alt: "Express.js", text: "Express.js - Building web applications and RESTful APIs with Node.js." },
+      { src: "/mongodb.webp", alt: "MongoDB", text: "MongoDB - Storing and querying data effectively in a NoSQL database." },
+      { src: "/git.webp", alt: "Git", text: "Git and GitHub - Version control and collaboration on software projects." }
+    ].map(skill => (
+      <div key={skill.alt} className="skill-item">
+        <img src={skill.src} alt={skill.alt} className="skill-image" />
+        <p>{skill.text}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* Projects */}
       <section>
@@ -54,10 +54,15 @@ function Resume() {
         </ul>
       </section>
 
-      {/* Resume Download (optional, if you have a detailed resume document) */}
+      {/* Coding Bootcamp Experience */}
       <section>
-        <h2>Download My Resume</h2>
-        <a href="/path-to-your-resume.pdf" download>Download Resume</a>
+        <h2>Coding Bootcamp Experience</h2>
+        <ul>
+          <li>
+            <strong>UCF Coding BootCamp</strong> - Completion Date - 4/09/24
+            <p>A rigorous, immersive program focused on full stack web development, covering technologies such as HTML, CSS, JavaScript, React, Node.js, and more.</p>
+          </li>
+        </ul>
       </section>
     </div>
   );
