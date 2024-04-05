@@ -4,6 +4,7 @@ function Resume() {
   return (
     <div className="resume">
       <h1>Resume</h1>
+      <h2>Joe McKenna-</h2> 
       <p>As a passionate learner and developer, I've honed my skills through intensive study and hands-on projects in a coding bootcamp. Below are some highlights of my journey and achievements.</p>
 
       {/* Coding Bootcamp Experience */}

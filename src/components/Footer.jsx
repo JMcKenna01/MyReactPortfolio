@@ -7,6 +7,7 @@ function Footer() {
         <a href="https://github.com/JMcKenna01" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
+        &nbsp;&nbsp;&nbsp; {/* Adding space */}
         <a href="https://www.linkedin.com/in/joseph-m-9061a2289/" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
