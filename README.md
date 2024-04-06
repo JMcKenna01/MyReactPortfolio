@@ -17,8 +17,7 @@ React Router for navigation between sections.
 - Dynamic Single-Page Application: Smooth navigation between sections without the need for reloading.
 - Responsive Design: Ensures a seamless experience across various devices and screen sizes.
 - Portfolio Section: Showcases detailed information about projects, including technologies used, with links to live sites and GitHub repositories.
-- Contact Form: Allows visitors to leave messages, demonstrating form handling in React. [Note: Mention if you've integrated backend services or plan to.]
-- Downloadable Resume: Provides a link to download my latest resume.
+- Contact Form: Allows visitors to leave messages, demonstrating form handling in React. 
 
 # Screenshot
 
