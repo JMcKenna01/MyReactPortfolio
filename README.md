@@ -51,7 +51,7 @@ This application is deployed on Netlify. You can view the live version here: htt
 # Contact
 Joe McKenna - [Jmckenna2026@gmail.com]
 
-#License
+# License
 
 MIT
 
