@@ -30,7 +30,7 @@ npm install npm@latest -g
 Installation
 Clone the repo
 
-git clone https://github.com/[YourGitHubUsername]/[RepoName].git
+git clone git@github.com:JMcKenna01/MyReactPortfolio.git
 
 Install NPM packages
 
