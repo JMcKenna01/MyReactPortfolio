@@ -41,10 +41,9 @@ npm install
 
 npm run dev
 
-# Deployment
+# Deployment 
 
-This application is deployed on Netlify. You can view the live version here: [(https://app.netlify.com/sites/josephmckenna/configuration/general?customize-site-name=true#:~:text=josephmckenna.netlify.app)]
-
+This application is deployed on Netlify. You can view the live version here: https://josephmckenna.netlify.app/
 # Contact
 Joe McKenna - [Jmckenna2026@gmail.com]
 
