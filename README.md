@@ -20,6 +20,10 @@ React Router for navigation between sections.
 - Contact Form: Allows visitors to leave messages, demonstrating form handling in React. [Note: Mention if you've integrated backend services or plan to.]
 - Downloadable Resume: Provides a link to download my latest resume.
 
+# Screenshot
+
+![MyReactPortfolio](https://github.com/JMcKenna01/MyReactPortfolio/assets/147211404/e209c202-86af-4929-b841-89e435cc1770)
+
 # Getting Started
 
 To get a local copy up and running, follow these simple steps.
