@@ -32,11 +32,11 @@ Clone the repo
 
 git clone git@github.com:JMcKenna01/MyReactPortfolio.git
 
-Install NPM packages
+- Install NPM packages
 
 npm install
 
-Run the application locally
+- Run the application locally
 
 
 npm run dev
